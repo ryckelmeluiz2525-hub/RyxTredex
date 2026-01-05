@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>𝑹𝒚𝒙𝑻𝒓𝒆𝒅𝒆𝑿</title>
+<title>RyxTredex</title>
 
 <style>
 * {
@@ -14,25 +14,23 @@
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at top, #0b1d2a, #000814);
-  color: #f5f5f5;
-  overflow-x: hidden;
+  background: radial-gradient(circle at top, #071a2f, #000814);
+  color: #ffffff;
 }
 
-/* Fumaça / névoa animada */
+/* Fundo com letras fracas */
 body::before {
-  content: "";
+  content: "RYXTREDEX • BLOX FRUITS • TRADES • PIRATAS • FRUTAS";
   position: fixed;
   inset: 0;
-  background: url("https://i.imgur.com/8QfQZ9C.png");
-  opacity: 0.15;
-  animation: smoke 60s linear infinite;
+  font-size: 40px;
+  color: rgba(255,255,255,0.03);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
   z-index: -1;
-}
-
-@keyframes smoke {
-  from { background-position: 0 0; }
-  to { background-position: 1000px 0; }
 }
 
 header {
@@ -40,16 +38,21 @@ header {
   text-align: center;
 }
 
+/* TÍTULO BRILHANTE */
 header h1 {
-  font-size: 46px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 15px #00aaff, 0 0 30px #004466;
+  font-size: 50px;
+  letter-spacing: 3px;
+  color: #00aaff;
+  text-shadow:
+    0 0 10px #00aaff,
+    0 0 25px #0088cc,
+    0 0 50px #004466;
 }
 
 header p {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 18px;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 main {
@@ -63,30 +66,56 @@ main {
   gap: 25px;
 }
 
-/* Cards estilo jogo */
+/* CARDS */
 .card {
   width: 260px;
-  background: linear-gradient(180deg, #102a43, #06131f);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-  transition: transform 0.4s;
+  background: linear-gradient(180deg, #0d2b45, #061827);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.08) rotate(-1deg);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0,170,255,0.4);
 }
 
 .card h3 {
   margin-bottom: 10px;
   color: #ffd700;
+  font-size: 20px;
 }
 
 .card p {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.5;
   opacity: 0.9;
+}
+
+/* BOTÕES */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ffd700, #ffae00);
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(255,215,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px rgba(255,215,0,0.8);
 }
 
 footer {
@@ -102,24 +131,30 @@ footer {
 
 <header>
   <h1>RyxTredex</h1>
-  <p>🏴‍☠️ Trade de Blox Fruits • Estilo Pirata</p>
+  <p>🏴‍☠️ Central de Trades do Blox Fruits</p>
+
+  <div class="buttons">
+    <a href="#" class="btn">⚔️ Trades</a>
+    <a href="#" class="btn">🍍 Frutas</a>
+    <a href="#" class="btn">💬 Comunidade</a>
+  </div>
 </header>
 
 <main>
   <div class="cards">
     <div class="card">
-      <h3>⚔️ Trades</h3>
-      <p>Trocas diretas e rápidas com outros piratas.</p>
+      <h3>⚔️ Sistema de Trocas</h3>
+      <p>Negocie frutas com outros jogadores de forma rápida e segura.</p>
     </div>
 
     <div class="card">
-      <h3>🍍 Frutas</h3>
-      <p>Valores e frutas mais procuradas do jogo.</p>
+      <h3>🍍 Valores</h3>
+      <p>Veja quais frutas são mais raras e valiosas no jogo.</p>
     </div>
 
     <div class="card">
-      <h3>🌊 Comunidade</h3>
-      <p>Negocie, converse e evolua no Blox Fruits.</p>
+      <h3>🌊 Piratas</h3>
+      <p>Entre para a tripulação RyxTredex e evolua.</p>
     </div>
   </div>
 </main>
