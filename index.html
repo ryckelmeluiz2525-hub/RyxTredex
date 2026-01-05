@@ -2,34 +2,131 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Meu Site</title>
+<title>RyxTredex</title>
+
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: linear-gradient(120deg, red, black);
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b1d2a, #000814);
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* Fumaça / névoa animada */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://i.imgur.com/8QfQZ9C.png");
+  opacity: 0.15;
+  animation: smoke 60s linear infinite;
+  z-index: -1;
+}
+
+@keyframes smoke {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 0; }
+}
+
+header {
+  padding: 70px 20px 40px;
   text-align: center;
 }
-h1 {
-  margin-top: 40px;
+
+header h1 {
+  font-size: 46px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #00aaff, 0 0 30px #004466;
 }
-.caixa {
-  background: white;
-  color: black;
-  margin: 20px;
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+main {
+  padding: 30px 15px 60px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Cards estilo jogo */
+.card {
+  width: 260px;
+  background: linear-gradient(180deg, #102a43, #06131f);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
   padding: 20px;
-  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  transition: transform 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.08) rotate(-1deg);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  opacity: 0.6;
 }
 </style>
 </head>
+
 <body>
 
-<h1>Bem-vindo ao meu site</h1>
+<header>
+  <h1>RyxTredex</h1>
+  <p>🏴‍☠️ Trade de Blox Fruits • Estilo Pirata</p>
+</header>
 
-<div class="caixa">
-  Site feito direto no GitHub
-</div>
+<main>
+  <div class="cards">
+    <div class="card">
+      <h3>⚔️ Trades</h3>
+      <p>Trocas diretas e rápidas com outros piratas.</p>
+    </div>
+
+    <div class="card">
+      <h3>🍍 Frutas</h3>
+      <p>Valores e frutas mais procuradas do jogo.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌊 Comunidade</h3>
+      <p>Negocie, converse e evolua no Blox Fruits.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2026 • RyxTredex • Blox Fruits
+</footer>
 
 </body>
 </html>
